@@ -74,4 +74,4 @@ const useTheme = () => {
   return context
 }
 
-export { ThemeProvider, useTheme, type Theme, type ThemeProviderProps, type ThemeProviderState }
+export { type Theme, ThemeProvider, type ThemeProviderProps, type ThemeProviderState, useTheme }

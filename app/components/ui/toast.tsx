@@ -15,24 +15,24 @@ const Toast = ({ ...props }: ToasterProps) => {
       style={
         {
           "--normal-bg": "var(--color-overlay)",
-          "--normal-text": "var(--color-overlay-fg)",
+          "--normal-text": "var(--color-overlay-foreground)",
           "--normal-border": "var(--color-border)",
 
-          "--success-bg": "var(--color-success-bg)",
-          "--success-border": "var(--color-success-border)",
-          "--success-text": "var(--color-success-text)",
+          "--success-bg": "var(--color-success-subtle)",
+          "--success-border": "var(--color-success-subtle-border)",
+          "--success-text": "var(--color-success-subtle-foreground)",
 
-          "--error-bg": "var(--color-error-bg)",
-          "--error-border": "var(--color-error-border)",
-          "--error-text": "var(--color-error-text)",
+          "--error-bg": "var(--color-danger-subtle)",
+          "--error-border": "var(--color-danger-subtle-border)",
+          "--error-text": "var(--color-danger-subtle-foreground)",
 
-          "--warning-bg": "var(--color-warning-bg)",
-          "--warning-border": "var(--color-warning-border)",
-          "--warning-text": "var(--color-warning-text)",
+          "--warning-bg": "var(--color-warning-subtle)",
+          "--warning-border": "var(--color-warning-subtle-border)",
+          "--warning-text": "var(--color-warning-subtle-foreground)",
 
-          "--info-bg": "var(--color-info-bg)",
-          "--info-border": "var(--color-info-border)",
-          "--info-text": "var(--color-info-text)",
+          "--info-bg": "var(--color-info-subtle)",
+          "--info-border": "var(--color-info-subtle-border)",
+          "--info-text": "var(--color-info-subtle-foreground)",
         } as React.CSSProperties
       }
       {...props}

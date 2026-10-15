@@ -1,11 +1,12 @@
-import { composeRenderProps } from "react-aria-components"
-import { type ClassNameValue, twMerge } from "tailwind-merge"
+import { type ClassNameValue, cn } from "cn"
+import { composeRenderProps } from "react-aria-components/composeRenderProps"
 
-function composeTailwindRenderProps<T>(
-  className: string | ((v: T) => string) | undefined,
-  tailwind: ClassNameValue,
+type Render<T> = string | ((v: T) => string) | undefined
+
+export function cx<T = unknown>(
+  ...classes: [...ClassNameValue[], Render<T>]
 ): string | ((v: T) => string) {
-  return composeRenderProps(className, (className) => twMerge(tailwind, className))
-}
+  const className = classes.pop() as Render<T>
 
-export { composeTailwindRenderProps }
+  return composeRenderProps(className, (className) => cn(classes, className))
+}
