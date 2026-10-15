@@ -1,16 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "./toast.css";
 @import "./fonts/inter.css";
+/*
+     ---break---
+     */
+@custom-variant dark (&:is(.dark *));
 @plugin "tailwindcss-react-aria-components";
 
 @variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "Geist Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
-  '"Liberation Mono"', '"Courier New"', "monospace";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    "Geist Mono", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
+    '"Liberation Mono"', '"Courier New"', "monospace";
 
   --color-border: var(--border);
   --color-input: var(--input);
@@ -63,6 +68,14 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --color-success-subtle: var(--success-subtle);
+  --color-success-subtle-foreground: var(--success-subtle-foreground);
+  --color-info-subtle: var(--info-subtle);
+  --color-info-subtle-foreground: var(--info-subtle-foreground);
+  --color-warning-subtle: var(--warning-subtle);
+  --color-warning-subtle-foreground: var(--warning-subtle-foreground);
+  --color-danger-subtle: var(--danger-subtle);
+  --color-danger-subtle-foreground: var(--danger-subtle-foreground);
 }
 
 :root {
@@ -110,6 +123,22 @@
   --chart-5: oklch(0.932 0.032 255.585);
 
   --radius-lg: 0.5rem;
+
+  --success-subtle: oklch(0.696 0.17 162.48 / 0.15);
+
+  --success-subtle-foreground: oklch(0.508 0.118 165.612);
+
+  --info-subtle: oklch(0.685 0.169 237.323 / 0.15);
+
+  --info-subtle-foreground: oklch(0.5 0.134 242.749);
+
+  --warning-subtle: oklch(0.828 0.189 84.429 / 0.2);
+
+  --warning-subtle-foreground: oklch(0.555 0.163 48.998);
+
+  --danger-subtle: oklch(0.637 0.237 25.331 / 0.15);
+
+  --danger-subtle-foreground: oklch(0.505 0.213 27.518);
 }
 
 .dark {
@@ -155,6 +184,14 @@
   --chart-3: oklch(0.707 0.165 254.624);
   --chart-4: oklch(0.809 0.105 251.813);
   --chart-5: oklch(0.882 0.059 254.128);
+  --success-subtle: oklch(0.696 0.17 162.48 / 0.1);
+  --success-subtle-foreground: oklch(0.765 0.177 163.223);
+  --info-subtle: oklch(0.685 0.169 237.323 / 0.1);
+  --info-subtle-foreground: oklch(0.828 0.111 230.318);
+  --warning-subtle: oklch(0.828 0.189 84.429 / 0.1);
+  --warning-subtle-foreground: oklch(0.828 0.189 84.429);
+  --danger-subtle: oklch(0.637 0.237 25.331 / 0.1);
+  --danger-subtle-foreground: oklch(0.704 0.191 22.216);
 }
 
 @layer base {
@@ -197,7 +234,7 @@
 }
 
 @utility touch-target {
-    position: relative;
+  position: relative;
   &::before {
     content: "";
     position: absolute;

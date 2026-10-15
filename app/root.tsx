@@ -1,7 +1,9 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router"
 
 import { Providers } from "~/components/providers"
+
 import type { Route } from "./+types/root"
+
 import stylesheet from "./app.css?url"
 
 export const links: Route.LinksFunction = () => [

@@ -4,7 +4,7 @@
   "rsc": false,
   "tsx": true,
   "tailwind": {
-    "config": "tailwind.config.ts",
+    "config": "",
     "css": "app/app.css",
     "baseColor": "zinc",
     "cssVariables": true,
@@ -12,7 +12,7 @@
   },
   "aliases": {
     "components": "~/components",
-    "utils": "~/lib/utils",
+    "utils": "~/lib/primitive",
     "ui": "~/components/ui",
     "lib": "~/lib",
     "hooks": "~/hooks"
